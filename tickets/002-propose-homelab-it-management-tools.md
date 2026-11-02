@@ -125,3 +125,19 @@ Credential rotation policies should be based on security requirements and the ca
 ## Expected Outcome
 
 Establish a structured, maintainable, and secure IT management environment that can grow alongside our homelab infrastructure and projects.
+
+## Planning Update — 2026-11-02
+
+Sivan supports moving forward with the proposal and will lead
+networking and security.
+
+GLPI is the first planned deployment, following the proposed
+implementation order.
+
+Before deployment, confirm:
+- Target VM.
+- RAM, CPU, and storage requirements.
+- Required access and permissions.
+- Installation, maintenance, and backup responsibilities.
+
+No deployment has been performed as part of this proposal yet.
