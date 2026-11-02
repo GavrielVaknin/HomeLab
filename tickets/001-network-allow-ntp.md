@@ -64,3 +64,25 @@ Additional network testing may be performed using appropriate NTP diagnostic too
 ## Notes
 
 Actual source subnets and destination NTP server addresses must be confirmed before implementation.
+
+## Validation Update — 2026-11-02
+
+NTP checks completed:
+
+- Raspberry Pi: NTP service active; clock synchronized.
+  NTP server response details confirmed with `timedatectl timesync-status`.
+- Proxmox host: NTP service active; clock synchronized.
+  Synchronization details confirmed with `chronyc tracking`.
+- Ubuntu VM 100: NTP service active; clock synchronized,
+  as reported by `timedatectl status`.
+
+No firewall changes were required for these checks.
+
+### Pending
+
+- Gavriel to verify NTP synchronization on his VM.
+- If the issue persists, provide the affected machine,
+  error message, timestamp, and NTP server address.
+
+The ticket remains open pending these checks.
+Approved NTP destinations have not yet been defined.
