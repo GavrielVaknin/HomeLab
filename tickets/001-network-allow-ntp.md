@@ -78,11 +78,12 @@ NTP checks completed:
 
 No firewall changes were required for these checks.
 
-### Pending
+### Final Update — 2026-11-03
 
-- Gavriel to verify NTP synchronization on his VM.
-- If the issue persists, provide the affected machine,
-  error message, timestamp, and NTP server address.
+Gavriel confirmed that NTP synchronization also works on his VM.
 
-The ticket remains open pending these checks.
-Approved NTP destinations have not yet been defined.
+All checked machines report working time synchronization.
+No firewall changes were required.
+
+The request is closed. Restricting NTP traffic to an approved
+server list, if desired, will be handled as a separate change.
