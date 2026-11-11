@@ -164,7 +164,7 @@ Public documentation uses substituted overlay addresses.
 | Raspberry Pi 5 | 100.101.10.10 |
 | ThinkPad T470 | 100.101.10.20 |
 
-### Published ports
+### Initially published ports
 
 | Port | Protocol | Purpose |
 |---|---|---|
@@ -213,6 +213,8 @@ Application endpoint:
 
     http://100.101.10.10:9000
 
+Initially, the Pi published ports 9000 and 9443. In the final configuration, Docker maps port 80 on the Pi to port 9000 in the container, and port 443 to port 9443. After the Tailscale access rule was updated, Gavriel confirmed that he could log in to authentik over HTTPS.
+
 ## 8. Security considerations
 
 - `.env` contains secrets and must remain outside version control.
@@ -248,7 +250,7 @@ The Docker socket mount and root execution increase the worker's privileges and 
 | authentik server | Running and healthy |
 | authentik worker | Running and healthy |
 | Tailscale connectivity | Operational |
-| Remote HTTP access | Restored |
+| Remote HTTPS login | Confirmed over | 
 
 Completed work establishes the Raspberry Pi as an independent container host within the homelab.
 
@@ -258,7 +260,6 @@ Pending work:
 - Integrate additional homelab applications.
 - Implement and test backups.
 - Review Docker socket access and worker privileges.
-- Verify HTTPS access remotely.
 - Test persistent data recovery.
 
-End-of-phase state: authentik and PostgreSQL are deployed and healthy. Remote HTTP access is operational. Further IAM configuration and security validation remain open.
+End-of-phase state: authentik and PostgreSQL are deployed and healthy. Remote HTTPS login over Tailscale was verified. Further IAM configuration and security validation remain open.
